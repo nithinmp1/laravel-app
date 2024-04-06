@@ -1,0 +1,8 @@
+xpath:
+  activityGrid: ctl00_Main_activityGrid
+  # sumGrid: ctl00_Main_sum_grid
+  # crewNoteGrid: ctl00_Main_crewNote_grid
+  # reportNotesGrid: ctl00_Main_reportNotes_grid
+  # accountGrid: ctl00_Main_account_grid
+  # expiryGrid: ctl00_Main_expiry_grid
+  # daysoffGrid: ctl00_Main_daysoff_grid
