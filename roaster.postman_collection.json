@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "cc62e359-759e-4086-88a4-881a60b7f421",
+		"name": "roaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25970923"
+	},
+	"item": [
+		{
+			"name": "fileUpload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/nithin/Documents/laravel/Roster - CrewConnex.html"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:1234/rosters",
+				"description": "to upload roaster file"
+			},
+			"response": []
+		},
+		{
+			"name": "getFligts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "airportCode",
+							"value": "KRP",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:1234/fligts",
+				"description": "get all fligts that depart from airport"
+			},
+			"response": []
+		},
+		{
+			"name": "getFligts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "airportCode",
+							"value": "BHK",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1234/fligts?date=14 Jan 2022",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1234",
+					"path": [
+						"fligts"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "14 Jan 2022"
+						}
+					]
+				},
+				"description": "get all flight charted for one week from selected date"
+			},
+			"response": []
+		},
+		{
+			"name": "getSBYEvents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "airportCode",
+							"value": "BHK",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1234/SBYEvents?date=14 Jan 2022",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1234",
+					"path": [
+						"SBYEvents"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "14 Jan 2022"
+						}
+					]
+				},
+				"description": "Get sby events for 1 week from selected date"
+			},
+			"response": []
+		},
+		{
+			"name": "getRoaster",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fromDate",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "toDate",
+							"value": "13",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1234/roasterFilter",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1234",
+					"path": [
+						"roasterFilter"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "filter for roaster data for perticular date"
+			},
+			"response": []
+		},
+		{
+			"name": "roaster",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/nithin/Documents/laravel/Roster - CrewConnex.html",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://0.0.0.0:1234/rosters",
+				"description": "get all uploaded roaster data"
+			},
+			"response": []
+		},
+		{
+			"name": "truncateDatabase",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{csrfToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/nithin/Documents/laravel/Roster - CrewConnex.html"
+						}
+					]
+				},
+				"url": "http://0.0.0.0:1234/truncateDatabase"
+			},
+			"response": []
+		},
+		{
+			"name": "csrf-token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"csrfToken\", jsonData.csrfToken);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://0.0.0.0:1234/getCsrfToken"
+			},
+			"response": []
+		}
+	]
+}
